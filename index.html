@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 80px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 45%;
+  padding: 20px;
+  margin: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>TESTING SOIL</h1>
+  <p>FOR THE   <b>FARMERS</b></p>
+  <p>FOR THE BETTER <b>CROPS</b></p>
+</div>
+
+<div class="navbar">
+  <a href="#" class="active">Home</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#" class="right">Link</a>
+</div>
+
+<div class="row">
+  <div class="side">
+    <h2>ABOUT US</h2>
+    <P>student at SRM UNIVERSITY AP</P>
+    <h4>CONTRIBUTORS:</h4>
+    <h5>Jagannadh Nooka</h5>
+    <h5>Jagadhesh</h5>
+    <h5>Vinay Balle</h5>
+    <h5>Amrish</h5>
+    
+    
+    <h3>Refrences</h3>
+    
+    <div class="fakeimg" style="height:60px;"><a href="https://ieeexplore.ieee.org/document/8312001">IEEE</a></div><br>
+    <div class="fakeimg" style="height:60px;"><a href="https://scholar.google.com/scholar?as_q=D.+NPK+Measurement+in+Soil+and+Automatic+Soil+Fertilizer+Dispensing+Robot&as_occt=title&hl=en&as_sdt=0%2C31">Google Scholar</a></div><br>
+    <div class="fakeimg" style="height:60px;"><a href="https://scholar.google.com/scholar?as_q=LED+Based+Soil+Spectroscopy&as_occt=title&hl=en&as_sdt=0%2C31">LED based Spectroscopy</a></div>
+  </div>
+  <div class="main">
+    <h2>Detection of nitrogen, phosphorus, and potassium (NPK) nutrients of soil using optical transducer</h2>
+    <h5>Digital Electronics</h5>
+    <div ><img src="soil.jpeg" ></div>
+    <h4>INTRODUCTION</h4>
+    <p>In todays  modern world  various technologies are being developed to the  ease the daily human activities.
+        In agricultural field a variety of tools ahve been developed to help the farmers make thier agricultural activities 
+        and get good crops.
+        To get a good crop, one of the important things that should be there is land that has adequate fertilizer. 
+        Adequate fertilizer can help plants produce good yields and quantities, to meet the needs of a world that is increasingly rising in need of food and food production. 
+        To improve the quality and quantity of crops, every country must contain sufficient nutrients, which consists of Nitrogen (N), Phosphorus (P), Potassium (K).
+        Nitrogen promotes the growth of leaves and vegetation, Phosphorus promotes root and growth and Potassium promotes flowering, fruiting and keeps regulation of nutrient and water in plant cell
+    <br>
+    <h4>PRINCIPLE FOR DETECTION</h4>
+    <p>We will be using absorption principle in this ,due to optical characteristics own by the soil(NPK). 
+        The method of the detection does not need any additional component therefore it is considered as a direct detection method. 
+        LEDs are utilized as the light source as the soil interacts by absorbing the light. 
+        The remaining light is detected and the absorption rate is evaluated using photodiode that has the capability converting the light into current. 
+        The output from the photodiode is manipulated using Arduino microcontroller, as a result the output current is converted and displayed as output voltages.</p>    
+    </p>
+    <br>
+    <h2>PROCEDURE</h2>
+    <p>
+       <p> 1.We will be taking three LEDs .</p>
+        <p>2.Each LEDs will be choosen according to the absorption spectrum of nitrogen phosphorus and pottasium.</p>
+        <p>3.LEDs will act as the light source and further we will use one photodiode to capture the light </p>
+        <p>reflected from the soil</p>
+        <p>4.Photodiode basically converts the light energy to electricity(current)</p>
+
+    </p>p>
+    <h5></h5>
+    <div ><img src="flow.png" width="300" height="250"></div>
+    <p>Some text..</p>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>&copy;copyright thinked.com</h2>
+</div>
+
+</body>
+</html>
